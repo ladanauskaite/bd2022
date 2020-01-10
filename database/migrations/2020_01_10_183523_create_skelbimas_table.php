@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePaslaugaTable extends Migration
+class CreateSkelbimasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,11 @@ class CreatePaslaugaTable extends Migration
      */
     public function up()
     {
-        Schema::create('paslaugas', function (Blueprint $table) {
+        Schema::create('skelbimas', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('paslaugospavadinimas', 256);
-            $table->string('paslaugosnuotrauka');
-            $table->text('paslaugostekstas');
+            $table->string('skelbimopavadinimas');
+            $table->string('skelbimonuotrauka');
+            $table->text('skelbimotekstas');
             $table->timestamps();
         });
     }
@@ -29,6 +29,6 @@ class CreatePaslaugaTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('paslaugas');
+        Schema::dropIfExists('skelbimas');
     }
 }

@@ -39,7 +39,15 @@
                     <input type="text" class="form-control" id="email" name="email" placeholder="Įrašyti kliento el. paštą..." value="{{ $admin->email }}">
                   </div>
                 </div>
-
+                 <div class="form-group row">
+                     <label for="role" class="col-md-4 col-form-label text-md-right">Pareigos</label>
+                     <div class="col-md-6">
+                     <select name="role" id="role" class="form-control" value="{{ $role->id }}" >
+                         <option value="Administratorius">Administratorius</option>
+                         <option value="Treneris">Treneris</option>
+                     </select>
+                     </div>
+                 </div>
 
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Redaguoti</button>

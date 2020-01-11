@@ -39,13 +39,11 @@
                     <input type="text" class="form-control" id="email" name="email" placeholder="Įrašyti kliento el. paštą..." value="{{ $admin->email }}">
                   </div>
                     <div class="form-group">
-                     <label for="role" class="col-md-4 col-form-label text-md-right">Pareigos</label>
-                     <div class="col-md-6">
+                     <label for="role"">Pareigos</label>
                      <select name="role" id="role" class="form-control" value="{{ $admin->role }}" >
                          <option value="Administratorius">Administratorius</option>
                          <option value="Treneris">Treneris</option>
                      </select>
-                     </div>
                  </div>
                 </div>
                  

@@ -42,7 +42,7 @@
                  <div class="form-group row">
                      <label for="role" class="col-md-4 col-form-label text-md-right">Pareigos</label>
                      <div class="col-md-6">
-                     <select name="role" id="role" class="form-control" value="{{ $role->id }}" >
+                     <select name="role" id="role" class="form-control" value="{{ $admin->role }}" >
                          <option value="Administratorius">Administratorius</option>
                          <option value="Treneris">Treneris</option>
                      </select>

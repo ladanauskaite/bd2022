@@ -3,8 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/xampp/htdocs/project/resources/views/admin/paslaugos/paslauga.blade.php</file>
-            <file>file:/C:/xampp/htdocs/project/resources/views/admin/paslaugos/show.blade.php</file>
+            <file>file:/C:/xampp/htdocs/sporto-klubo-sistema/app/naujiena.php</file>
+            <file>file:/C:/xampp/htdocs/sporto-klubo-sistema/app/Providers/AppServiceProvider.php</file>
+            <file>file:/C:/xampp/htdocs/sporto-klubo-sistema/database/migrations/2020_01_10_183427_create_admins_table.php</file>
+            <file>file:/C:/xampp/htdocs/sporto-klubo-sistema/database/migrations/2020_01_10_183535_create_tvarkarastis_table.php</file>
+            <file>file:/C:/xampp/htdocs/sporto-klubo-sistema/database/migrations/2014_10_12_000000_create_users_table.php</file>
+            <file>file:/C:/xampp/htdocs/sporto-klubo-sistema/database/migrations/2020_01_04_175513_create_paslaugas_table.php</file>
+            <file>file:/C:/xampp/htdocs/sporto-klubo-sistema/app/Admin.php</file>
+            <file>file:/C:/xampp/htdocs/sporto-klubo-sistema/app/paslauga.php</file>
+            <file>file:/C:/xampp/htdocs/sporto-klubo-sistema/resources/views/admin/login.blade.php</file>
+            <file>file:/C:/xampp/htdocs/sporto-klubo-sistema/app/kainorastis.php</file>
+            <file>file:/C:/xampp/htdocs/sporto-klubo-sistema/app/tvarkarastis.php</file>
+            <file>file:/C:/xampp/htdocs/sporto-klubo-sistema/database/migrations/2020_01_10_183523_create_skelbimas_table.php</file>
+            <file>file:/C:/xampp/htdocs/sporto-klubo-sistema/app/User.php</file>
         </group>
     </open-files>
 </project-private>

@@ -10,18 +10,18 @@
         <ul class="navbar-nav ml-auto">
 
           <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="http://localhost:8000/kainorastis">Kainoraštis</a>
+              <a class="nav-link js-scroll-trigger" href="http://193.219.91.103:15562/kainorastis">Kainoraštis</a>
           </li>
           @if (Auth::check())
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="http://localhost:8000/tvarkarastis">Tvarkaraštis</a>
+            <a class="nav-link js-scroll-trigger" href="http://193.219.91.103:15562/tvarkarastis">Tvarkaraštis</a>
           </li>
           @endif
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="http://localhost:8000/naujienos">Naujienos</a>
+            <a class="nav-link js-scroll-trigger" href="http://193.219.91.103:15562/naujienos">Naujienos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="http://localhost:8000/karjera">Karjera</a>
+            <a class="nav-link js-scroll-trigger" href="http://193.219.91.103:15562/karjera">Karjera</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#signup">Kontaktai</a>

@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use Illuminate\Http\Request;
-use App\User;
-use App\Admin;
+use App\sportoklubas;
+use App\admin_sportoklubas;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 
@@ -18,48 +18,57 @@ class AdminController extends Controller
     public function index()
     {
         $admins = admin::all();
-        return view('admin.administratoriai.show', compact('admins'));
+         $sportoklubas = sportoklubas::all();
+         $admin_sportoklubas = admin_sportoklubas::all();
+        return view('admin.administratoriai.show', compact('admins','sportoklubas','admin_sportoklubas'));
     }
     
     protected function create()
     {
-       return view('admin/administratoriai/create');
+        $admins = admin::all();
+         $sportoklubas = sportoklubas::all();
+         $admin_sportoklubas = admin_sportoklubas::all();
+       return view('admin/administratoriai/create', compact('admins','sportoklubas','admin_sportoklubas'));
     }
 
     public function store(Request $request)
     {
+        $this->validate($request,[
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:admins',
+            'password' => 'required|string|min:6|confirmed',
+            'role' => 'required',
+            ]);
         $admin = new admin; 
         $admin->name = $request->name;
         $admin->email = $request->email;
         $admin->password = Hash::make($request->password);
         $admin->role = $request->role;
-
-        
         $admin->save();
-        
+        $admin->sportoklubas()->sync($request->sportoklubas);
         return redirect(route('administratoriai.index'));
-    }
-
-    public function show($id)
-    {
-        //
     }
 
     public function edit($id)
     {
+         $sportoklubas = sportoklubas::all();
         $admin = admin::where('id',$id)->first();
-        return view('admin.administratoriai.edit',compact('admin'));
+        return view('admin.administratoriai.edit',compact('admin','sportoklubas'));
     }
-
+    
     public function update(Request $request, $id)
     {
+        $this->validate($request,[
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:admins',
+            'role' => 'required',
+            ]);
         $admin = admin::find($id); 
         $admin->name = $request->name;
         $admin->email = $request->email;
-        $admin->password = Hash::make($request->password);
         $admin->role = $request->role;
-        $admin->save();
-        
+       admin::find($id)->sportoklubas()->sync($request->sportoklubas);
+          $admin->save();
         return redirect(route('administratoriai.index'));
     }
 

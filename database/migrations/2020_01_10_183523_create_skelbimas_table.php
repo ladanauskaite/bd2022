@@ -15,6 +15,8 @@ class CreateSkelbimasTable extends Migration
     {
         Schema::create('skelbimas', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('admin_id');
+            $table->foreign('admin_id')->references('id')->on('admins');
             $table->string('skelbimopavadinimas');
             $table->string('skelbimonuotrauka');
             $table->text('skelbimotekstas');

@@ -9,7 +9,10 @@ use Illuminate\Notifications\Notifiable;
 class User extends Authenticatable
 {
     use Notifiable;
-
+    public function rezervacijas()
+    {
+    	return $this->belongsToMany('App\rezervacija','user_rezervacija')->withTimestamps();
+    }
     /**
      * The attributes that are mass assignable.
      *

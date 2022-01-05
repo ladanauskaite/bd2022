@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\skelbimas;
 use App\Http\Controllers\Controller;
+use App\admin;
+use Illuminate\Support\Facades\Auth;
 
 class SkelbimoController extends Controller
 {
@@ -16,25 +18,27 @@ class SkelbimoController extends Controller
     public function index()
     {
         $skelbimas = skelbimas::all();
-        return view('admin.skelbimai.show', compact('skelbimas'));
+        $admins = admin::all();
+        return view('admin.skelbimai.show', compact('skelbimas', 'admins'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        return view('admin/skelbimai/skelbimas');
+        $admins = admin::all();
+        return view('admin/skelbimai/skelbimas', compact('admins'));
     }
 
     public function store(Request $request)
     {
+        $this->validate($request,[
+            'skelbimopavadinimas' => 'required',
+            'skelbimotekstas' => 'required',
+            ]);
         if($request->hasFile('skelbimonuotrauka')) {
             $nuotraukospavadinimas= $request->skelbimonuotrauka->store('public'); 
          }
         $skelbimas = new skelbimas;
+        $skelbimas->admin_id = Auth::id();
         $skelbimas->skelbimopavadinimas = $request->skelbimopavadinimas;
         $skelbimas->skelbimonuotrauka = $nuotraukospavadinimas;
         $skelbimas->skelbimotekstas = $request->skelbimotekstas;
@@ -43,23 +47,25 @@ class SkelbimoController extends Controller
         return redirect(route('skelbimai.index'));
     }
 
-    public function show($id)
-    {
-        
-    }
     
     public function edit($id)
     {
         $skelbimas = skelbimas::where('id',$id)->first();
-        return view('admin.skelbimai.edit',compact('skelbimas'));
+        $admins = admin::all();
+        return view('admin.skelbimai.edit',compact('skelbimas', 'admins'));
     }
 
     public function update(Request $request, $id)
     {
+        $this->validate($request,[
+            'skelbimopavadinimas' => 'required',
+            'skelbimotekstas' => 'required',
+            ]);
         if($request->hasFile('skelbimonuotrauka')) {
             $nuotraukospavadinimas= $request->skelbimonuotrauka->store('public'); 
          }
         $skelbimas = skelbimas::find($id);
+        $skelbimas->admin_id = Auth::id();
         $skelbimas->skelbimopavadinimas = $request->skelbimopavadinimas;
         $skelbimas->skelbimonuotrauka = $nuotraukospavadinimas;
         $skelbimas->skelbimotekstas = $request->skelbimotekstas;

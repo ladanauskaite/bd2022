@@ -15,6 +15,8 @@ class CreateKainorastisTable extends Migration
     {
         Schema::create('kainorastis', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('admin_id');
+            $table->foreign('admin_id')->references('id')->on('admins');
             $table->string('kainospavadinimas');
             $table->string('suma');
             $table->string('laikotarpis');

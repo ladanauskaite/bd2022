@@ -33,6 +33,7 @@
                 <tr>
                   <th>Skelbimo numeris</th>
                   <th>Skelbimo pavadinimas</th>
+                  <th>Administratoriaus vardas</th>
                   <th>Skelbimo nuotrauka</th>
                   <th>Skelbimo tekstas</th>
                   <th>Koreguoti</th>
@@ -44,6 +45,13 @@
                     <tr>
                         <td>{{ $loop->index + 1 }}</td>
                         <td>{{ $skelbimas->skelbimopavadinimas }}</td>
+                        <td> 
+                             @foreach ($admins as $admin)
+                             @if ($skelbimas->admin_id == $admin->id)
+                                  {{$admin->name}}
+                              @endif
+                             @endforeach
+                        </td>
                         <td>{{ $skelbimas->skelbimonuotrauka }}</td>
                         <td>{{ $skelbimas->skelbimotekstas }}</td>
                          <td><a href="{{ route('skelbimai.edit',$skelbimas->id) }}"><span class="ion-edit"></span></a></td>

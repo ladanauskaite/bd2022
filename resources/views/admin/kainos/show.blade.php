@@ -33,6 +33,7 @@
                 <tr>
                   <th>Kainos numeris</th>
                   <th>Kainos pavadinimas</th>
+                  <th>Administratoriaus vardas</th>
                   <th>Suma</th>
                   <th>Laikotarpis</th>
                   <th>Kainos tekstas</th>
@@ -45,6 +46,13 @@
                     <tr>
                         <td>{{ $loop->index + 1 }}</td>
                         <td>{{ $kainorastis->kainospavadinimas }}</td>
+                                             <td> 
+                             @foreach ($admins as $admin)
+                             @if ($kainorastis->admin_id == $admin->id)
+                                  {{$admin->name}}
+                              @endif
+                             @endforeach
+                        </td>
                         <td>{{ $kainorastis->suma }}</td>
                         <td>{{ $kainorastis->laikotarpis }}</td>
                         <td>{{ $kainorastis->kainostekstas }}</td>

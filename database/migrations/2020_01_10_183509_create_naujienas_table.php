@@ -15,6 +15,8 @@ class CreateNaujienasTable extends Migration
     {
         Schema::create('naujienas', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('admin_id');
+            $table->foreign('admin_id')->references('id')->on('admins');
             $table->string('naujienospavadinimas');
             $table->string('naujienosnuotrauka');
             $table->text('naujienostekstas');

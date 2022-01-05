@@ -34,6 +34,7 @@
                 <tr>
                   <th>Paslaugos numeris</th>
                   <th>Paslaugos pavadinimas</th>
+                   <th>Administratoriaus vardas</th>
                   <th>Paslaugos nuotrauka</th>
                   <th>Paslaugos tekstas</th>
                   <th>Koreguoti</th>
@@ -45,6 +46,13 @@
                     <tr>
                         <td>{{ $loop->index + 1 }}</td>
                         <td>{{ $paslauga->paslaugospavadinimas }}</td>
+                        <td> 
+                             @foreach ($admins as $admin)
+                             @if ($paslauga->admin_id == $admin->id)
+                                  {{$admin->name}}
+                              @endif
+                             @endforeach
+                        </td>
                         <td>{{ $paslauga->paslaugosnuotrauka }}</td>
                         <td>{{ $paslauga->paslaugostekstas }}</td>
                         <td><a href="{{ route('paslaugos.edit',$paslauga->id) }}"><span class="ion-edit"></span></a></td>

@@ -40,20 +40,32 @@
                   </div>
                     <div class="form-group">
                      <label for="role"">Pareigos</label>
-                     <select name="role" id="role" class="form-control" value="{{ $admin->role }}" >
-                         <option value="Administratorius">Administratorius</option>
-                         <option value="Treneris">Treneris</option>
+                     <select name="role" id="role" class="form-control" onchange="yesnoCheck(this);">
+                         <option 
+                              @if($admin->role == "Administratorius")
+                             selected
+                             @endif
+                             value="Administratorius">Administratorius</option>
+                         <option 
+                             @if($admin->role == "Individualus treneris")
+                             selected
+                             @endif
+                             value="Individualus treneris">Individualus treneris</option>
+                         <option 
+                              @if($admin->role == "Sporto klubo treneris")
+                             selected
+                             @endif
+                             value="Sporto klubo treneris">Sporto klubo treneris</option>
                      </select>
                  </div>
-                </div>
                  
 
                 <div class="card-footer">
                   <button type="submit" class="btn btn-primary">Redaguoti</button>
                   <a href="{{ route('administratoriai.index') }}" class="btn btn-warning">Grįžti atgal</a>
                 </div>
-              </form>
             </div>
+              </form>
 
         </div>
         <!-- /.col-->

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
+ <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Administratoriaus prisijungimas</title>
   <!-- Tell the browser to be responsive to screen width -->
@@ -23,7 +23,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
   <div class="login-logo">
-    <a href="../../index2.html"><b>FITUS SPORTO KLUBAS</b></a>
+    <a href="../../index2.html"><b>Sporto klubų sistema</b></a>
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body">
@@ -34,18 +34,32 @@
     <form action="{{ route('admin.login') }}" method="post">
         <input type="hidden" name="_token" value="{{ csrf_token() }}">
       <div class="form-group has-feedback">
-        <input type="email" class="form-control" name="email" placeholder="Email">
+        <input type="email" class="form-control" name="email" placeholder="El. paštas">
         <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
       </div>
       <div class="form-group has-feedback">
-        <input type="password" class="form-control" name="password" placeholder="Password">
+        <input type="password" class="form-control" name="password" placeholder="Slaptažodis">
         <span class="glyphicon glyphicon-lock form-control-feedback"></span>
       </div>
         
-      <div class="row">
-        <div class="col-xs-4">
+      <div class="row mb-2">
+          <div class="col-xs-4">
+               </div>
+        <div class="col-xs-4 text-center">
           <button type="submit" class="btn btn-primary btn-block btn-flat">Prisijungti</button>
         </div>
+          <div class="col-xs-4">
+               </div>
+        <!-- /.col -->
+      </div>
+        <div class="row mb-2">
+          <div class="col-xs-4">
+               </div>
+        <div class="col-xs-4 text-center">
+          <a href="{{ route('admin-register.index') }}" class="btn btn-success btn-block btn-flat">Registruotis</a>
+        </div>
+          <div class="col-xs-4">
+               </div>
         <!-- /.col -->
       </div>
     </form>

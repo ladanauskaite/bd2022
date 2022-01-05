@@ -23,7 +23,7 @@
         <div class="col-12">
           <div class="card">
             <div class="card-header">
-              <a class="col-md-offset-5 btn btn-primary" href="{{ route('tvarkarastis.create') }}">Pridėti treniruotę</a>
+              <a class="col-md-offset-5 btn btn-primary" href="{{ route('treniruotes.create') }}">Pridėti treniruotę</a>
             </div>
               
               
@@ -34,24 +34,22 @@
                 <tr>
                   <th>Treniruotės numeris</th>
                   <th>Treniruotės pavadinimas</th>
-                  <th>Treniruotės data</th>
-                  <th>Treniruotės laikas nuo</th>
-                  <th>Treniruotės laikas iki</th>
+                  <th>Treniruotės tekstas</th>
+                  <th>Administrratoriaus ID</th>
                   <th>Koreguoti</th>
                   <th>Ištrinti</th>
                 </tr>
                 </thead>
                 <tbody>
-                    @foreach($tvarkarastis as $tvarkarastis)
+                    @foreach($treniruotes as $treniruote)
                     <tr>
                         <td>{{ $loop->index + 1 }}</td>
-                        <td>{{ $tvarkarastis->treniruotespavadinimas }}</td>
-                        <td>{{ $tvarkarastis->data }}</td>
-                        <td>{{ $tvarkarastis->laikas_nuo }}</td>
-                        <td>{{ $tvarkarastis->laikas_iki }}</td>
-                        <td><a href="{{ route('tvarkarastis.edit',$tvarkarastis->id) }}"><span class="ion-edit"></span></a></td>
+                        <td>{{ $treniruote->treniruotespavadinimas }}</td>
+                        <td>{{ $treniruote->treniruotestekstas }}</td>
+                        <td>{{ $treniruote->admin_id }}</td>
+                        <td><a href="{{ route('treniruotes.edit',$treniruote->id) }}"><span class="ion-edit"></span></a></td>
                         <td>
-                            <form id="delete-form-{{$tvarkarastis->id}}" method="post" action="{{ route('tvarkarastis.destroy',$tvarkarastis->id) }}" style="display: none">
+                            <form id="delete-form-{{$treniruote->id}}" method="post" action="{{ route('treniruotes.destroy',$treniruote->id) }}" style="display: none">
                                <input type="hidden" name="_token" value="{{ csrf_token() }}">
                                 <input type="hidden" name="_method" value="DELETE"/>
                             </form>
@@ -59,7 +57,7 @@
                                if(confirm('Ar tikrai?'))
                           {
                               event.preventDefault();
-                              document.getElementById('delete-form-{{ $tvarkarastis->id }}').submit();
+                              document.getElementById('delete-form-{{ $treniruote->id }}').submit();
                           } 
                             else {
                                 event.preventDefault();

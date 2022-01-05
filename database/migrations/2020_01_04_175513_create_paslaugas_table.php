@@ -15,6 +15,7 @@ class CreatePaslaugasTable extends Migration
     {
         Schema::create('paslaugas', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('admin_id');
             $table->string('paslaugospavadinimas');
             $table->string('paslaugosnuotrauka');
             $table->text('paslaugostekstas');

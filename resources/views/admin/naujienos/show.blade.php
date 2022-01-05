@@ -33,6 +33,7 @@
                 <tr>
                   <th>Naujienos numeris</th>
                   <th>Naujienos pavadinimas</th>
+               <th>Administratoriaus vardas</th>
                   <th>Naujienos nuotrauka</th>
                   <th>Naujienos tekstas</th>
                   <th>Koreguoti</th>
@@ -44,6 +45,13 @@
                     <tr>
                         <td>{{ $loop->index + 1 }}</td>
                         <td>{{ $naujiena->naujienospavadinimas }}</td>
+                         <td> 
+                             @foreach ($admins as $admin)
+                             @if ($naujiena->admin_id == $admin->id)
+                                  {{$admin->name}}
+                              @endif
+                             @endforeach
+                        </td>
                         <td>{{ $naujiena->naujienosnuotrauka }}</td>
                         <td>{{ $naujiena->naujienostekstas }}</td>
                         <td><a href="{{ route('naujienos.edit',$naujiena->id) }}"><span class="ion-edit"></span></a></td>

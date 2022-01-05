@@ -3,7 +3,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Fitus</title>
+  <title>Sportinės veiklos valdymo sistema</title>
 
   <!-- Bootstrap core CSS -->
   <link href="{{ asset('user/vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
@@ -15,3 +15,5 @@
 
   <!-- Custom styles for this template -->
   <link href="{{ asset('user/css/grayscale.min.css') }}" rel="stylesheet">
+  
+  

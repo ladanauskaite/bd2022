@@ -13,8 +13,8 @@
   <header class="masthead">
     <div class="container d-flex h-100 align-items-center">
       <div class="mx-auto text-center">
-        <h1 class="mx-auto my-0 text-uppercase">Fitus</h1>
-        <h2 class="text-white-50 mx-auto mt-2 mb-5 text-uppercase">norintiems daugiau</h2>
+        <h1 class="mx-auto my-0 text-uppercase">Sportinės veiklos</h1>
+        <h2 class="text-white-50 mx-auto mt-2 mb-5 text-uppercase">valdymo sistema</h2>
       </div>
     </div>
   </header>
@@ -76,12 +76,15 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
+                                <button type="submit" class="btn btn-secondary mb-1">
                                     {{ __('Prisjungti') }}
                                 </button>
+                                <a href="{{ route('register') }}" class="btn btn-primary">
+                                    {{ __('Registruotis') }}
+                                </a>
 
                                 @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
+                                    <a class="btn btn-link text-decoration-none" href="{{ route('password.request') }}">
                                         {{ __('Priminti slaptažodį') }}
                                     </a>
                                 @endif
@@ -141,7 +144,7 @@
               <h4 class="text-uppercase m-0">El. paštas</h4>
               <hr class="my-4">
               <div class="small text-black-50">
-                <a href="#">fitus@fitus.lt</a>
+                <a href="#">example@gmail.com</a>
               </div>
             </div>
           </div>
@@ -160,7 +163,7 @@
       </div>
 
       <div class="social d-flex justify-content-center">
-        <a href="https://www.facebook.com/FITUS-Sporto-klubas-1714087255497694/" class="mx-2">
+        <a href="" class="mx-2">
           <i class="fab fa-facebook-f"></i>
         </a>
       </div>

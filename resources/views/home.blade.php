@@ -13,7 +13,7 @@
   <header class="masthead">
     <div class="container d-flex h-100 align-items-center">
       <div class="mx-auto text-center">
-        <h1 class="mx-auto my-0 text-uppercase">Fitus</h1>
+        <h1 class="mx-auto my-0 text-uppercase">Sportinės veiklos valdymo sistema</h1>
         <h2 class="text-white-50 mx-auto mt-2 mb-5 text-uppercase">norintiems daugiau</h2>
       </div>
     </div>
@@ -30,7 +30,7 @@
           <div class="bg-black text-center h-100 project">
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-left">
-                <h4 class="text-white">Sveiki prisijungę prie FITUS sporto klubo sistemos!</h4>
+                <h4 class="text-white">Sveiki prisijungę sportinės veiklos valdymo sistemos!</h4>
                 <hr class="d-none d-lg-block mb-0 ml-0">
               </div>
             </div>
@@ -84,7 +84,7 @@
               <h4 class="text-uppercase m-0">El. paštas</h4>
               <hr class="my-4">
               <div class="small text-black-50">
-                <a href="#">fitus@fitus.lt</a>
+                <a href="#">example@gmail.com</a>
               </div>
             </div>
           </div>
@@ -103,7 +103,7 @@
       </div>
 
       <div class="social d-flex justify-content-center">
-        <a href="https://www.facebook.com/FITUS-Sporto-klubas-1714087255497694/" class="mx-2">
+        <a href="" class="mx-2">
           <i class="fab fa-facebook-f"></i>
         </a>
       </div>

@@ -85,13 +85,27 @@
                  <div class="form-group row">
                      <label for="role" class="col-md-4 col-form-label text-md-right">Priskirti pareigas</label>
                      <div class="col-md-6">
-                     <select name="role" id="role" class="form-control">
+                     <select name="role" id="role" class="form-control"  onchange="yesnoCheck(this);">
+                         @if(Auth::user()->role == "Administratorius")
                          <option value="Administratorius">Administratorius</option>
-                         <option value="Treneris">Treneris</option>
+                         @endif
+                         @if(Auth::user()->role == "Sporto klubas" || Auth::user()->role == "Administratorius")
+                         <option value="Sporto klubo treneris">Sporto klubo treneris</option>
+                         @endif
+                         @if(Auth::user()->role == "Administratorius")
+                         <option value="Individualus treneris">Individualus treneris</option>
+                         @endif
                      </select>
                      </div>
                  </div>
+                 <div class="form-group row" id="ifYes" style="display: none;">
+                   <select class="form-select" multiple aria-label="multiple select example" name="sportoklubas[]" style="margin-left:390px">
+                          @foreach($sportoklubas as $sportoklubas)
+  <option value="{{$sportoklubas->id}}">{{$sportoklubas->sportoklubopavadinimas}}</option>
+                   @endforeach
 
+</select>
+                 </div>
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -106,7 +120,6 @@
                     </form>
                 </div>
             </div>
-              </form>
             </div>
 
         </div>
@@ -118,3 +131,5 @@
   </div>
 
 @endsection
+
+

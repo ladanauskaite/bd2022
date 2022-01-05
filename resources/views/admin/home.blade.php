@@ -20,7 +20,7 @@
       <!-- Default box -->
       <div class="card">
         <div class="card-header">
-          <h3 class="card-title">Fitus sporto klubas</h3>
+          <h3 class="card-title">Sportinės veiklos valdymo sistema</h3>
 
           <div class="card-tools">
             <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -30,11 +30,11 @@
           </div>
         </div>
         <div class="card-body">
-          Fitus sporto klubo internetinės svetainės valdymas
+          Sportinės veiklos valdymo sistema
         </div>
         <!-- /.card-body -->
         <div class="card-footer">
-          Fitus 2019
+          Sportinės veiklos valdymo sistema
         </div>
         <!-- /.card-footer-->
       </div>

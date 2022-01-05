@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers\User;
 
-use Illuminate\Http\Request;
 use App\skelbimas;
 use App\Http\Controllers\Controller;
 

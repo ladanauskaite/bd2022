@@ -24,7 +24,16 @@ class UserLiveRezervacijosController extends Controller
 
         public function destroy($id)
     {
-        user_live_rezervacija::where('id', $id)->delete();
+             try {
+       
+       user_live_rezervacija::where('id', $id)->delete();
         return redirect()->back();
+        }
+        catch(\Illuminate\Database\QueryException $e){
+
+     return back()->with('error', 'Veiksmas negalimas');
+        }
+        
+        
     }
 }

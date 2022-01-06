@@ -170,7 +170,9 @@ class RezervacijosController extends Controller
 
     public function destroy($id)
     {
-        $atsaukta = new atsaukta;
+        
+             try {
+       $atsaukta = new atsaukta;
         $atsaukta->rezervacijos_id=rezervacija::where('id', $id)->first()->id;
         $atsaukta->sportoklubo_id = rezervacija::where('id', $id)->first()->sportoklubo_id;
         $atsaukta->sales_id = rezervacija::where('id', $id)->first()->sales_id;
@@ -181,5 +183,12 @@ class RezervacijosController extends Controller
         $atsaukta->save();
         rezervacija::where('id', $id)->delete();
         return redirect()->back();
+        }
+        catch(\Illuminate\Database\QueryException $e){
+
+     return back()->with('error', 'Veiksmas negalimas');
+        }
+        
+       
     }
 }

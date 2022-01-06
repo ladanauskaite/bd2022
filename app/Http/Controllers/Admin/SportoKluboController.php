@@ -64,7 +64,15 @@ class SportoKluboController extends Controller
 
     public function destroy($id)
     {
+          try {
+       
         sportoklubas::where('id', $id)->delete();
         return redirect()->back();
+        }
+        catch(\Illuminate\Database\QueryException $e){
+
+     return back()->with('error', 'Veiksmas negalimas');
+        }
+        
     }
 }

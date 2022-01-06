@@ -75,7 +75,13 @@ class AdminController extends Controller
 
     public function destroy($id)
     {
+                try {
         admin::where('id', $id)->delete();
         return redirect()->back();
+        }
+        catch(\Illuminate\Database\QueryException $e){
+
+     return back()->with('error', 'Veiksmas negalimas');
+        }
     }
 }

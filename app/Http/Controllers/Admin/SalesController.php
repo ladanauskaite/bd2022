@@ -65,7 +65,18 @@ class SalesController extends Controller
 
     public function destroy($id)
     {
+        try {
         sale::where('id', $id)->delete();
         return redirect()->back();
+        }
+        catch(\Illuminate\Database\QueryException $e){
+            $errorCode = $e->errorInfo[1];
+    if($errorCode == '1062'){
+       return back()->with('error', 'Your message may be a duplicate. Did you refresh the page? We blocked that submission. If you feel this was in error, e-mail us or call us.');
+    }
+    else{
+     return back()->with('error', 'Veiksmas negalimas');
+    }
+        }
     }
 }

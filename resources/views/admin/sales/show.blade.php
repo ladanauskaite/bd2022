@@ -24,7 +24,12 @@
             <div class="card-header">
               <a class="col-md-offset-5 btn btn-primary" href="{{ route('sales.create') }}">Pridėti salę</a>
             </div>
-              
+
+              @if(session()->has('error'))
+              <div class="alert alert-danger m-3" role="alert">
+                {{session()->get('error')}}
+                </div>
+              @endif
               
             <!-- /.card-header -->
             <div class="card-body">

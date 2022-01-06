@@ -63,7 +63,14 @@ class KlientoController extends Controller
 
     public function destroy($id)
     {
-        user::where('id', $id)->delete();
+        
+             try {
+       user::where('id', $id)->delete();
         return redirect()->back();
+        }
+        catch(\Illuminate\Database\QueryException $e){
+
+     return back()->with('error', 'Veiksmas negalimas');
+        }
     }
 }

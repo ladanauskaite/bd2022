@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\User;
 
 use App\Http\Controllers\Controller;
-use App\user;
+use App\User;
 use App\sportoklubas;
 use Illuminate\Support\Carbon;
 use App\rezervacija;

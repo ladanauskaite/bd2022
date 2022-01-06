@@ -41,7 +41,7 @@
         </div>
 
       <div class="wrapper">
-        <div class="pricing-table group">
+        <div class="pricing-table group m-0">
             @foreach($kainos as $kainorastis)
             <div class="block personal fl">
                 <h2 class="title">{{ $kainorastis->kainospavadinimas }}</h2>

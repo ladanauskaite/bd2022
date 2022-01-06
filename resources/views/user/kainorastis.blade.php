@@ -55,79 +55,9 @@
     </div>
   </div>
              @endforeach
-             @foreach($kainos as $kainorastis)
-  <div class="card">
-   <div class="card-header">{{ $kainorastis->kainospavadinimas }}</div>
-    <div class="card-body">
-      <h5 class="card-title">{{ $kainorastis->suma }}</h5>
-      <p class="card-text">{{ $kainorastis->laikotarpis }}</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">{{ $kainorastis->kainostekstas }}</small>
-    </div>
-  </div>
-             @endforeach
-             @foreach($kainos as $kainorastis)
-  <div class="card">
-   <div class="card-header">{{ $kainorastis->kainospavadinimas }}</div>
-    <div class="card-body">
-      <h5 class="card-title">{{ $kainorastis->suma }}</h5>
-      <p class="card-text">{{ $kainorastis->laikotarpis }}</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">{{ $kainorastis->kainostekstas }}</small>
-    </div>
-  </div>
-             @endforeach
-             @foreach($kainos as $kainorastis)
-  <div class="card">
-   <div class="card-header">{{ $kainorastis->kainospavadinimas }}</div>
-    <div class="card-body">
-      <h5 class="card-title">{{ $kainorastis->suma }}</h5>
-      <p class="card-text">{{ $kainorastis->laikotarpis }}</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">{{ $kainorastis->kainostekstas }}</small>
-    </div>
-  </div>
-             @endforeach
-             @foreach($kainos as $kainorastis)
-  <div class="card">
-   <div class="card-header">{{ $kainorastis->kainospavadinimas }}</div>
-    <div class="card-body">
-      <h5 class="card-title">{{ $kainorastis->suma }}</h5>
-      <p class="card-text">{{ $kainorastis->laikotarpis }}</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">{{ $kainorastis->kainostekstas }}</small>
-    </div>
-  </div>
-             @endforeach
-             @foreach($kainos as $kainorastis)
-  <div class="card">
-   <div class="card-header">{{ $kainorastis->kainospavadinimas }}</div>
-    <div class="card-body">
-      <h5 class="card-title">{{ $kainorastis->suma }}</h5>
-      <p class="card-text">{{ $kainorastis->laikotarpis }}</p>
-    </div>
-    <div class="card-footer">
-      <small class="text-muted">{{ $kainorastis->kainostekstas }}</small>
-    </div>
-  </div>
-             @endforeach
-             
+
         </div>
         
-        
-        
-        
-        
-        
-        
-        
-        
-
-
     </div>
   </section>
 

@@ -40,8 +40,7 @@
       </div>
         </div>
 
-      <div class="wrapper">
-        <div class="pricing-table group m-0">
+        <div class="col-4">
             @foreach($kainos as $kainorastis)
             <div class="block personal fl">
                 <h2 class="title">{{ $kainorastis->kainospavadinimas }}</h2>
@@ -58,7 +57,6 @@
             </div>
         @endforeach
         </div>
-    </div>
     </div>
   </section>
 

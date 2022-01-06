@@ -5,7 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\user_rezervacija;
-use App\user;
+use App\User;
 use App\rezervacija;
 
 class UserRezervacijosController extends Controller

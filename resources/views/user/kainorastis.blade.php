@@ -39,24 +39,95 @@
       <br>
       </div>
         </div>
-
-        <div class="col-4">
-            @foreach($kainos as $kainorastis)
-            <div class="block personal fl">
-                <h2 class="title">{{ $kainorastis->kainospavadinimas }}</h2>
-                <div class="content">
-                    <p class="price">
-                        <sup>€</sup>
-                        <span>{{ $kainorastis->suma }}</span>
-                    </p>
-                     <p class="hint">{{ $kainorastis->laikotarpis }}</p>
-                </div>
-                <ul class="features">
-                    {{ $kainorastis->kainostekstas }}
-                </ul>
-            </div>
-        @endforeach
+        
+        
+        
+        <div class="card-deck">
+             @foreach($kainos as $kainorastis)
+  <div class="card">
+   <div class="card-header">{{ $kainorastis->kainospavadinimas }}</div>
+    <div class="card-body">
+      <h5 class="card-title">{{ $kainorastis->suma }}</h5>
+      <p class="card-text">{{ $kainorastis->laikotarpis }}</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">{{ $kainorastis->kainostekstas }}</small>
+    </div>
+  </div>
+             @endforeach
+             @foreach($kainos as $kainorastis)
+  <div class="card">
+   <div class="card-header">{{ $kainorastis->kainospavadinimas }}</div>
+    <div class="card-body">
+      <h5 class="card-title">{{ $kainorastis->suma }}</h5>
+      <p class="card-text">{{ $kainorastis->laikotarpis }}</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">{{ $kainorastis->kainostekstas }}</small>
+    </div>
+  </div>
+             @endforeach
+             @foreach($kainos as $kainorastis)
+  <div class="card">
+   <div class="card-header">{{ $kainorastis->kainospavadinimas }}</div>
+    <div class="card-body">
+      <h5 class="card-title">{{ $kainorastis->suma }}</h5>
+      <p class="card-text">{{ $kainorastis->laikotarpis }}</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">{{ $kainorastis->kainostekstas }}</small>
+    </div>
+  </div>
+             @endforeach
+             @foreach($kainos as $kainorastis)
+  <div class="card">
+   <div class="card-header">{{ $kainorastis->kainospavadinimas }}</div>
+    <div class="card-body">
+      <h5 class="card-title">{{ $kainorastis->suma }}</h5>
+      <p class="card-text">{{ $kainorastis->laikotarpis }}</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">{{ $kainorastis->kainostekstas }}</small>
+    </div>
+  </div>
+             @endforeach
+             @foreach($kainos as $kainorastis)
+  <div class="card">
+   <div class="card-header">{{ $kainorastis->kainospavadinimas }}</div>
+    <div class="card-body">
+      <h5 class="card-title">{{ $kainorastis->suma }}</h5>
+      <p class="card-text">{{ $kainorastis->laikotarpis }}</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">{{ $kainorastis->kainostekstas }}</small>
+    </div>
+  </div>
+             @endforeach
+             @foreach($kainos as $kainorastis)
+  <div class="card">
+   <div class="card-header">{{ $kainorastis->kainospavadinimas }}</div>
+    <div class="card-body">
+      <h5 class="card-title">{{ $kainorastis->suma }}</h5>
+      <p class="card-text">{{ $kainorastis->laikotarpis }}</p>
+    </div>
+    <div class="card-footer">
+      <small class="text-muted">{{ $kainorastis->kainostekstas }}</small>
+    </div>
+  </div>
+             @endforeach
+             
         </div>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+
     </div>
   </section>
 

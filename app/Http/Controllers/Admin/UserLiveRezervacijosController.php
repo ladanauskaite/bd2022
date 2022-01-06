@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\user_live_rezervacija;
-use App\user;
+use App\User;
 use App\rezervacija;
 
 class UserLiveRezervacijosController extends Controller

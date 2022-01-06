@@ -22,7 +22,7 @@
                 
             
            
-           @if(Auth::user()->role == "Administratorius" || Auth::user()->role == "Individualus treneris" || Auth::user()->role == "Treneris" || Auth::user()->role == "Sporto klubo treneris")
+           @if(Auth::user()->role == "Administratorius")
               <li class="nav-item">
                 <a href="{{ route('treniruotes.index') }}" class="nav-link active">
                   <p>Treniruotės</p>
@@ -39,7 +39,7 @@
             @endif
 
             
-            @if(Auth::user()->role == "Administratorius" || Auth::user()->role == "Sporto klubo treneris")
+            @if(Auth::user()->role == "Administratorius")
               <li class="nav-item">
                 <a href="{{ route('sales.index') }}" class="nav-link active">
                   Salės
@@ -94,7 +94,7 @@
                 </a>
               </li>
             @endif
-  @if(Auth::user()->role == "Administratorius" || Auth::user()->role == "Individualus treneris" || Auth::user()->role == "Treneris" || Auth::user()->role == "Sporto klubo treneris")
+  @if(Auth::user()->role == "Administratorius" || Auth::user()->role == "Sporto klubo treneris")
               <li class="nav-item">
                 <a href="{{ route('rezervacijos.index') }}" class="nav-link active">
                   <p>Tvarkaraštis</p>
@@ -102,21 +102,21 @@
               </li>
            @endif
      
-            @if(Auth::user()->role == "Administratorius")
+            @if(Auth::user()->role == "Administratorius"  || Auth::user()->role == "Sporto klubo treneris")
               <li class="nav-item">
                 <a href="{{ route('user-rezervacijos.index') }}" class="nav-link active">
                   <p>Treniruočių registracija</p>
                 </a>
               </li>
             @endif
-            @if(Auth::user()->role == "Administratorius")
+            @if(Auth::user()->role == "Administratorius" || Auth::user()->role == "Sporto klubo treneris"  || Auth::user()->role == "Individualus treneris")
               <li class="nav-item">
                 <a href="{{ route('live-rezervacijos.index') }}" class="nav-link active">
                   <p>LIVE treniruočių tvarkaraštis</p>
                 </a>
               </li>
             @endif
-            @if(Auth::user()->role == "Administratorius")
+            @if(Auth::user()->role == "Administratorius" || Auth::user()->role == "Sporto klubo treneris"  || Auth::user()->role == "Individualus treneris")
               <li class="nav-item">
                 <a href="{{ route('user-live-rezervacijos.index')}}" class="nav-link active">
                   <p>LIVE treniruočių registracija</p>

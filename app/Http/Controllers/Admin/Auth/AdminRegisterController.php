@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin\Auth;
 
 use Illuminate\Http\Request;
 use App\sportoklubas;
+use App\admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 

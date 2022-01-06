@@ -35,7 +35,6 @@
                   <th>Kliento numeris</th>
                   <th>Kliento vardas</th>
                   <th>Kliento elektroninis paštas</th>
-                  <th>Kliento slaptažodis</th>
                   <th>Koreguoti</th>
                   <th>Ištrinti</th>
                 </tr>
@@ -46,7 +45,6 @@
                         <td>{{ $loop->index + 1 }}</td>
                         <td>{{ $user->name }}</td>
                         <td>{{ $user->email }}</td>
-                        <td>{{ $user->password }}</td>
                         <td><a href="{{ route('klientai.edit',$user->id) }}"><span class="ion-edit"></span></a></td>
                         <td>
                             <form id="delete-form-{{$user->id}}" method="post" action="{{ route('klientai.destroy',$user->id) }}" style="display: none">

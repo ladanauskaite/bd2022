@@ -22,7 +22,7 @@
                 
             
            
-           @if(Auth::user()->role == "Administratorius")
+           @if(Auth::user()->role == "Administratorius" || Auth::user()->role == "Sporto klubo treneris"  || Auth::user()->role == "Individualus treneris")
               <li class="nav-item">
                 <a href="{{ route('treniruotes.index') }}" class="nav-link active">
                   <p>Treniruotės</p>

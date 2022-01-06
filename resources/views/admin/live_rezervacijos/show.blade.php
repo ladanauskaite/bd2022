@@ -20,6 +20,11 @@
      <section class="content">
       <div class="row">
         <div class="col-12">
+              @if(session()->has('error'))
+              <div class="alert alert-danger m-3" role="alert">
+                {{session()->get('error')}}
+                </div>
+              @endif
           <div class="card">
             <div class="card-header">
               <a class="col-md-offset-5 btn btn-primary" href="{{ route('live-rezervacijos.create') }}">Pridėti video rezervaciją</a>
